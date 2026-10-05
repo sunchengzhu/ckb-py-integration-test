@@ -22,20 +22,6 @@ jobs:
 
        # os: [ubuntu-22.04, macos-latest]
 
-    services:
-      postgres:
-        image: postgres:16
-        env:
-          POSTGRES_PASSWORD: ckb-test-only
-          POSTGRES_DB: postgres
-        ports:
-          - 5432/tcp
-        options: >-
-          --health-cmd "pg_isready -U postgres -d postgres"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
-
 
     steps:
     - uses: actions/checkout@v3
@@ -48,18 +34,12 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-        python -m pip install 'psycopg[binary]==3.2.10'
       
     - name: Install dependencies
       run: make prepare
 
     - name: Run tests
       run: make test
-      env:
-        CKB_TEST_PG_HOST: 127.0.0.1
-        CKB_TEST_PG_PORT: ${{ job.services.postgres.ports[5432] }}
-        CKB_TEST_PG_USER: postgres
-        CKB_TEST_PG_PASSWORD: ckb-test-only
 
 #    - name: Setup upterm session
 #      if: always()
