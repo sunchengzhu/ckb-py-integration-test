@@ -1,0 +1,51 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.10.16, pytest-8.4.2, pluggy-1.5.0 -- /Users/sunchengzhu/project/ckb-py-integration-test/venv/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.10.16', 'Platform': 'macOS-26.6.2-arm64-arm-64bit', 'Packages': {'pytest': '8.4.2', 'pluggy': '1.5.0'}, 'Plugins': {'html': '3.2.0', 'metadata': '3.1.1', 'docs': '0.1.0'}}
+rootdir: /Users/sunchengzhu/project/ckb-py-integration-test
+configfile: pytest.ini
+plugins: html-3.2.0, metadata-3.1.1, docs-0.1.0
+collecting ... collected 7 items
+
+../../../Users/sunchengzhu/project/ckb-py-integration-test::test_pass <- ../../../../private/tmp/ckb5300-runner-probe-d7ping7w/tests/test_probe.py PASSED [ 14%]
+../../../Users/sunchengzhu/project/ckb-py-integration-test::test_call_failure <- ../../../../private/tmp/ckb5300-runner-probe-d7ping7w/tests/test_probe.py FAILED [ 28%]
+../../../Users/sunchengzhu/project/ckb-py-integration-test::test_call_skip <- ../../../../private/tmp/ckb5300-runner-probe-d7ping7w/tests/test_probe.py SKIPPED [ 42%]
+../../../Users/sunchengzhu/project/ckb-py-integration-test::test_setup_failure <- ../../../../private/tmp/ckb5300-runner-probe-d7ping7w/tests/test_probe.py ERROR [ 57%]
+../../../Users/sunchengzhu/project/ckb-py-integration-test::test_setup_skip <- ../../../../private/tmp/ckb5300-runner-probe-d7ping7w/tests/test_probe.py SKIPPED [ 71%]
+../../../Users/sunchengzhu/project/ckb-py-integration-test::test_teardown_failure <- ../../../../private/tmp/ckb5300-runner-probe-d7ping7w/tests/test_probe.py PASSED [ 85%]
+../../../Users/sunchengzhu/project/ckb-py-integration-test::test_teardown_failure <- ../../../../private/tmp/ckb5300-runner-probe-d7ping7w/tests/test_probe.py ERROR [ 85%]
+../../../Users/sunchengzhu/project/ckb-py-integration-test::test_unexpected_pass <- ../../../../private/tmp/ckb5300-runner-probe-d7ping7w/tests/test_probe.py XPASS [100%]
+
+==================================== ERRORS ====================================
+_____________________ ERROR at setup of test_setup_failure _____________________
+
+    @pytest.fixture
+    def broken_setup():
+>       raise RuntimeError("intentional setup probe")
+E       RuntimeError: intentional setup probe
+
+tests/test_probe.py:5: RuntimeError
+__________________ ERROR at teardown of test_teardown_failure __________________
+@pytest.fixture
+    def broken_teardown():
+        yield
+>       raise RuntimeError("intentional teardown probe")
+E       RuntimeError: intentional teardown probe
+
+tests/test_probe.py:14: RuntimeError
+=================================== FAILURES ===================================
+______________________________ test_call_failure _______________________________
+
+    def test_call_failure():
+>       assert False, "intentional call failure"
+E       AssertionError: intentional call failure
+E       assert False
+
+tests/test_probe.py:20: AssertionError
+- generated html file: file:///private/tmp/ckb5300-runner-probe-d7ping7w/report/report.html -
+=========================== short test summary info ============================
+FAILED ../../../Users/sunchengzhu/project/ckb-py-integration-test::test_call_failure - AssertionError: intentional call failure
+assert False
+ERROR ../../../Users/sunchengzhu/project/ckb-py-integration-test::test_setup_failure - RuntimeError: intentional setup probe
+ERROR ../../../Users/sunchengzhu/project/ckb-py-integration-test::test_teardown_failure
+========= 1 failed, 2 passed, 2 skipped, 1 xpassed, 2 errors in 0.04s ==========

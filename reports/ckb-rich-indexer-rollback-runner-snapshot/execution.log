@@ -1,0 +1,26 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.10.16, pytest-8.4.2, pluggy-1.5.0 -- /Users/sunchengzhu/project/ckb-py-integration-test/venv/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.10.16', 'Platform': 'macOS-26.6.2-arm64-arm-64bit', 'Packages': {'pytest': '8.4.2', 'pluggy': '1.5.0'}, 'Plugins': {'html': '3.2.0', 'metadata': '3.1.1', 'docs': '0.1.0'}}
+rootdir: /Users/sunchengzhu/project/ckb-py-integration-test
+configfile: pytest.ini
+plugins: html-3.2.0, metadata-3.1.1, docs-0.1.0
+collecting ... collected 14 items
+
+suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_single_filtered_block[postgres] PASSED [  7%]
+suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_single_filtered_block[sqlite] PASSED [ 14%]
+suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_consecutive_filtered_blocks[postgres] PASSED [ 21%]
+suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_consecutive_filtered_blocks[sqlite] PASSED [ 28%]
+suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_indexed_spend_restored[postgres] PASSED [ 35%]
+suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_indexed_spend_restored[sqlite] PASSED [ 42%]
+suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_mixed_rollback_orders[filtered-first-postgres] PASSED [ 50%]
+suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_mixed_rollback_orders[filtered-first-sqlite] PASSED [ 57%]
+suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_mixed_rollback_orders[indexed-first-postgres] PASSED [ 64%]
+suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_mixed_rollback_orders[indexed-first-sqlite] PASSED [ 71%]
+suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_spend_restored_cell[postgres] PASSED [ 78%]
+suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_spend_restored_cell[sqlite] PASSED [ 85%]
+suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_restart_preserves_rollback[postgres] PASSED [ 92%]
+suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_restart_preserves_rollback[sqlite] PASSED [100%]
+
+- generated html file: file:///Users/sunchengzhu/project/ckb-py-integration-test/report/report.html -
+============================= 14 passed in 37.44s ==============================

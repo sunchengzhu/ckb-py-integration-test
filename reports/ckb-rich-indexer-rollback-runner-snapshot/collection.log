@@ -1,0 +1,37 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.10.16, pytest-8.4.2, pluggy-1.5.0 -- /Users/sunchengzhu/project/ckb-py-integration-test/venv/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.10.16', 'Platform': 'macOS-26.6.2-arm64-arm-64bit', 'Packages': {'pytest': '8.4.2', 'pluggy': '1.5.0'}, 'Plugins': {'html': '3.2.0', 'metadata': '3.1.1', 'docs': '0.1.0'}}
+rootdir: /Users/sunchengzhu/project/ckb-py-integration-test
+configfile: pytest.ini
+plugins: html-3.2.0, metadata-3.1.1, docs-0.1.0
+collecting ... collected 14 items
+
+<Dir ckb-py-integration-test>
+  <Dir suites>
+    <Dir rpc>
+      <Dir tests>
+        <Module test_rich_indexer_rollback.py>
+          Real devnet regression tests for PR 5300, from the confirmed rollback design.
+          
+          All state is local: the repository's Dummy-PoW dev spec, an always-success
+          genesis system cell, two owned node processes and one unique SQL database.
+          The runtime manifest is prepared separately from the tests at the pinned head.
+          <Class TestRichIndexerRollback>
+            <Function test_single_filtered_block[postgres]>
+            <Function test_single_filtered_block[sqlite]>
+            <Function test_consecutive_filtered_blocks[postgres]>
+            <Function test_consecutive_filtered_blocks[sqlite]>
+            <Function test_indexed_spend_restored[postgres]>
+            <Function test_indexed_spend_restored[sqlite]>
+            <Function test_mixed_rollback_orders[filtered-first-postgres]>
+            <Function test_mixed_rollback_orders[filtered-first-sqlite]>
+            <Function test_mixed_rollback_orders[indexed-first-postgres]>
+            <Function test_mixed_rollback_orders[indexed-first-sqlite]>
+            <Function test_spend_restored_cell[postgres]>
+            <Function test_spend_restored_cell[sqlite]>
+            <Function test_restart_preserves_rollback[postgres]>
+            <Function test_restart_preserves_rollback[sqlite]>
+
+- generated html file: file:///Users/sunchengzhu/project/ckb-py-integration-test/report/report.html -
+========================= 14 tests collected in 0.12s ==========================

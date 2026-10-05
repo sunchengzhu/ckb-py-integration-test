@@ -1,0 +1,8 @@
+{
+  "owned_postgres_container": "ai-ckb5300-pg-7790dea5",
+  "container_stopped_and_auto_removed": true,
+  "ephemeral_database_store": "tmpfs destroyed by container removal",
+  "active_owned_ckb_processes": [],
+  "frozen_runtime_files": "preserved unchanged; the previous local credential no longer has a running database endpoint",
+  "performed_after_final_execution": true
+}

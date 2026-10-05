@@ -1,0 +1,94 @@
+{
+  "purpose": "Runner-only compatibility probe using real pytest8.4.2 and pytest-html3.2.0; not product Case execution.",
+  "command": [
+    "/Users/sunchengzhu/project/ckb-py-integration-test/venv/bin/python",
+    "-m",
+    "pytest",
+    "-c",
+    "/Users/sunchengzhu/project/ckb-py-integration-test/pytest.ini",
+    "-vv",
+    "/private/tmp/ckb5300-runner-probe-d7ping7w/tests/test_probe.py"
+  ],
+  "cwd": "/private/tmp/ckb5300-runner-probe-d7ping7w",
+  "exit_code": 1,
+  "expected_exit_code": 1,
+  "checks_passed": true,
+  "results": {
+    "schema_version": "2.0",
+    "collected": 7,
+    "results": [
+      {
+        "selector": "::test_pass",
+        "status": "passed",
+        "unstable": false
+      },
+      {
+        "selector": "::test_call_failure",
+        "status": "failed",
+        "unstable": false
+      },
+      {
+        "selector": "::test_call_skip",
+        "status": "skipped",
+        "unstable": false
+      },
+      {
+        "selector": "::test_setup_failure",
+        "status": "failed",
+        "unstable": false
+      },
+      {
+        "selector": "::test_setup_skip",
+        "status": "skipped",
+        "unstable": false
+      },
+      {
+        "selector": "::test_teardown_failure",
+        "status": "failed",
+        "unstable": false
+      },
+      {
+        "selector": "::test_unexpected_pass",
+        "status": "passed",
+        "unstable": true
+      }
+    ],
+    "manifest": [
+      {
+        "selector": "::test_pass",
+        "file": "tests/test_probe.py",
+        "symbol": "test_pass"
+      },
+      {
+        "selector": "::test_call_failure",
+        "file": "tests/test_probe.py",
+        "symbol": "test_call_failure"
+      },
+      {
+        "selector": "::test_call_skip",
+        "file": "tests/test_probe.py",
+        "symbol": "test_call_skip"
+      },
+      {
+        "selector": "::test_setup_failure",
+        "file": "tests/test_probe.py",
+        "symbol": "test_setup_failure"
+      },
+      {
+        "selector": "::test_setup_skip",
+        "file": "tests/test_probe.py",
+        "symbol": "test_setup_skip"
+      },
+      {
+        "selector": "::test_teardown_failure",
+        "file": "tests/test_probe.py",
+        "symbol": "test_teardown_failure"
+      },
+      {
+        "selector": "::test_unexpected_pass",
+        "file": "tests/test_probe.py",
+        "symbol": "test_unexpected_pass"
+      }
+    ]
+  }
+}

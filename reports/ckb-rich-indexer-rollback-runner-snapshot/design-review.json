@@ -1,0 +1,62 @@
+{
+  "acknowledgements": [
+    {
+      "case_id": "RICH-ROLLBACK-01",
+      "spec_refs": [
+        "reviews/ckb-pr-5300-rich-indexer-rollback.md#spec-01",
+        "reviews/ckb-pr-5300-rich-indexer-rollback.md#spec-02",
+        "reviews/ckb-pr-5300-rich-indexer-rollback.md#spec-04"
+      ]
+    },
+    {
+      "case_id": "RICH-ROLLBACK-02",
+      "spec_refs": [
+        "reviews/ckb-pr-5300-rich-indexer-rollback.md#spec-01",
+        "reviews/ckb-pr-5300-rich-indexer-rollback.md#spec-02",
+        "reviews/ckb-pr-5300-rich-indexer-rollback.md#spec-04"
+      ]
+    },
+    {
+      "case_id": "RICH-ROLLBACK-03",
+      "spec_refs": [
+        "reviews/ckb-pr-5300-rich-indexer-rollback.md#spec-03",
+        "reviews/ckb-pr-5300-rich-indexer-rollback.md#spec-04"
+      ]
+    },
+    {
+      "case_id": "RICH-ROLLBACK-04",
+      "spec_refs": [
+        "reviews/ckb-pr-5300-rich-indexer-rollback.md#spec-01",
+        "reviews/ckb-pr-5300-rich-indexer-rollback.md#spec-02",
+        "reviews/ckb-pr-5300-rich-indexer-rollback.md#spec-03",
+        "reviews/ckb-pr-5300-rich-indexer-rollback.md#spec-04"
+      ]
+    },
+    {
+      "case_id": "RICH-ROLLBACK-05",
+      "spec_refs": [
+        "reviews/ckb-pr-5300-rich-indexer-rollback.md#spec-03",
+        "reviews/ckb-pr-5300-rich-indexer-rollback.md#spec-04",
+        "reviews/ckb-pr-5300-rich-indexer-rollback.md#spec-05"
+      ]
+    },
+    {
+      "case_id": "RICH-ROLLBACK-06",
+      "spec_refs": [
+        "reviews/ckb-pr-5300-rich-indexer-rollback.md#spec-03",
+        "reviews/ckb-pr-5300-rich-indexer-rollback.md#spec-04",
+        "reviews/ckb-pr-5300-rich-indexer-rollback.md#spec-05",
+        "reviews/ckb-pr-5300-rich-indexer-rollback.md#spec-06"
+      ]
+    }
+  ],
+  "findings": [],
+  "input_fingerprint": "36f8eddab6d178a7a94321b5185c5d1bd936707183271dd8b6887b67faa34c27",
+  "reviewer": {
+    "isolation": "isolation_unverified",
+    "model": "unavailable",
+    "session": "/root/ckb5300_runner_snapshot_design_b"
+  },
+  "schema_version": "2.0",
+  "scope": "ckb-rich-indexer-rollback-runner-snapshot"
+}

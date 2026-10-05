@@ -1,0 +1,42 @@
+{
+  "user_request": "你当你是第一次新增不行吗 能否整个回滚掉[https://github.com/nervosnetwork/ckb-py-integration-test/pull/145](https://github.com/nervosnetwork/ckb-py-integration-test/pull/145)的修改 完全用新的[ai-test-agent 规范](/Users/sunchengzhu/project/ai-test-agent/SKILL.md) 跑一遍 gate1这边你已经做了很多工作了 可以保留 代码标记重新标记一下即可",
+  "bilingual_request": "另外为了方便后面分享 能否生成中英双语的review文档（因为我ppt需要中英双语）",
+  "mode": "First addition after complete local PR145 revert; retain G1 Spec/tree/Cases, no prior automation, full PR-v2 workflow with mandatory human confirmation at G1 before fresh implementation, B coverage review, managed annotations, execution and G2.",
+  "product_pr": "https://github.com/nervosnetwork/ckb/pull/5300",
+  "product_base_tip": "649c6fef24125d73197a33e0a6e47f64acdc3d5f",
+  "product_head": "33e4eec7502b754ddf61282c04e0a76a29e27b26",
+  "product_merge_base": "649c6fef24125d73197a33e0a6e47f64acdc3d5f",
+  "test_project_revision": "d3f8a00e1693e1e11daa7950182b68e0e4ed5232",
+  "review": "reviews/ckb-pr-5300-rich-indexer-rollback.md",
+  "command_not_executed": [
+    "venv/bin/python",
+    "-m",
+    "pytest",
+    "-c",
+    "pytest.ini",
+    "-vv",
+    "suites/rpc/tests/test_rich_indexer_rollback.py"
+  ],
+  "cwd": "/Users/sunchengzhu/project/ckb-py-integration-test",
+  "environment_constraints": [
+    "At G1 the six selected Cases have no automation; new tests will follow suites/rpc/tests/ and native pytest conventions only after explicit human confirmation.",
+    "Native CKB node tests require DOCKER absent; PostgreSQL and SQLite need isolated case-owned storage.",
+    "No PR-head binary has yet been built and no node/database has been started. Exact selected-head build and runtime inputs must be fixed before implementation coverage review and execution.",
+    "The available 0.210 release contains a backport plus other changes and is not the selected PR-head execution artifact; the default 0.209 binary is not the selected fixed head.",
+    "Original PR145 implementation and CI additions were fully reverted; old execution/coverage/design fingerprints do not provide evidence for this fresh baseline.",
+    "The official global mapping checker also reports 14 checkbox mismatches in other legacy review documents because test_cases/ is outside its recognized code directories. The six selected first-addition Cases correctly have zero mappings; no whole-project mapping pass is claimed. Legacy compatibility must be resolved before the controlled implementation stage can pass its global checks."
+  ],
+  "test_project_before_reset": "b93bbbb56c7297c38f355bed8c841c79b0c61d08",
+  "pr145_base": "4b520d7cb603ab66f0e17232d285ecb2d507ea3f",
+  "reset_commit": "d3f8a00e1693e1e11daa7950182b68e0e4ed5232",
+  "reverted_paths": [
+    ".github/workflows/ci_integration_tests.yml",
+    "reviews/ckb-pr-5300-rich-indexer-rollback.md",
+    "reviews/ckb-pr-5304-alert-removal.md",
+    "test_cases/feature/alert_message.py",
+    "test_cases/feature/tcp_delay.py",
+    "test_cases/feature/test_alert_removal.py",
+    "test_cases/rpc/test_rich_indexer_rollback.py"
+  ],
+  "preserved_g1_design_sha256_before_reset": "c8ee35b79393265c518cdfa937831e5b18d6c203857a7545254a2295e2fd41ec"
+}

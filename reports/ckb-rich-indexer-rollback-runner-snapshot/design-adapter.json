@@ -1,0 +1,8 @@
+{
+  "backend": "manual",
+  "host_attested": false,
+  "isolation": "isolation_unverified",
+  "model": "unavailable",
+  "session": "unavailable",
+  "transport_contract_tested": false
+}

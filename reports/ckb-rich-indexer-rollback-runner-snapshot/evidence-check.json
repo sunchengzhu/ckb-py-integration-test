@@ -1,0 +1,116 @@
+{
+  "command": [
+    "python3",
+    "/Users/sunchengzhu/project/ckb-py-integration-test/.ai-test-agent/runtime/ai-test-agent/scripts/check_test_evidence.py",
+    "--root",
+    "/Users/sunchengzhu/project/ckb-py-integration-test",
+    "--scope",
+    "ckb-rich-indexer-rollback-runner-snapshot",
+    "--require-reviewed",
+    "--json"
+  ],
+  "exit_code": 1,
+  "report": {
+    "schema_version": "2.0",
+    "scope": "ckb-rich-indexer-rollback-runner-snapshot",
+    "result": "needs_decision",
+    "transport_contract_tested": false,
+    "independent_review": false,
+    "errors": [],
+    "cases": [
+      {
+        "case_id": "RICH-ROLLBACK-01",
+        "mapped": true,
+        "coverage": "covered",
+        "validity": "current",
+        "execution": "passed",
+        "unstable": false,
+        "priority": "P0",
+        "issues": [
+          "覆盖只涉及固定精确 lock、有限构造的 cell/交易、固定高度 block filter 和分组交易查询；完整结果指该查询范围。有限深度与输入不能证明所有回滚深度、所有输入或整个数据库。 / EN: Coverage concerns one fixed exact lock, finite constructed cells/transactions, fixed height filtering and grouped queries; complete results refer to that query domain. Finite depths/inputs do not establish all rollback depths, all inputs or whole-database correctness.",
+          "cell filtering、txpool overlay、非分组分页、数据库中断、强制崩溃、迁移、性能与其他产品 PR 不在本 slice；未计量 reset_spent_cells 的内部数据库调用次数，接口正确不能证明零内部查询。 / EN: Cell filtering, pool overlay, ungrouped pagination, outages, forced crashes, migrations, performance and other product PRs are outside this slice. Internal reset_spent_cells database-call counts are not measured; correct public behavior does not establish zero internal queries.",
+          "等待使用 45 秒 deadline、0.1 秒轮询和每次 RPC 的单次调用/5 秒超时；仅启动阶段重试连接或超时。其他 RPC 异常、节点退出、过期等待和清理失败使测试失败，不被吞掉。分页最多 30 页；这些有限条件不是性能阈值保证。 / EN: Waits use a 45-second deadline, 0.1-second polling and one RPC attempt with a five-second timeout; connection/timeouts are retried only at startup. Other RPC errors, node exits, expired waits and cleanup failures fail the test. Pagination allows at most 30 pages; these finite conditions are not performance guarantees.",
+          "记录器在 logreport 时浅拷贝 TestReport，判定仅依赖 when/outcome/wasxfail 标量；HTML 合并阶段对原报告的标量重赋值不改写快照。只有完整且唯一的 setup/call/teardown 成功才授予执行成功；失败、跳过、重复阶段及意外成功保留失败或不稳定信息。该规则不保证所有其他插件、嵌套可变字段或并发 runner 的兼容性；Case 覆盖判断与正式执行证据分别管理。 / EN: The recorder shallow-copies TestReport at logreport and classifies scalar when/outcome/wasxfail fields; later HTML scalar reassignment leaves snapshots intact. Execution success requires complete unique successful setup/call/teardown phases; failures, skips, duplicate phases and unexpected successes retain failure or instability information. This does not guarantee compatibility with every other plugin, nested mutable field or concurrent runner; Case coverage and official execution evidence remain separate."
+        ]
+      },
+      {
+        "case_id": "RICH-ROLLBACK-02",
+        "mapped": true,
+        "coverage": "covered",
+        "validity": "current",
+        "execution": "passed",
+        "unstable": false,
+        "priority": "P1",
+        "issues": [
+          "覆盖只涉及固定精确 lock、有限构造的 cell/交易、固定高度 block filter 和分组交易查询；完整结果指该查询范围。有限深度与输入不能证明所有回滚深度、所有输入或整个数据库。 / EN: Coverage concerns one fixed exact lock, finite constructed cells/transactions, fixed height filtering and grouped queries; complete results refer to that query domain. Finite depths/inputs do not establish all rollback depths, all inputs or whole-database correctness.",
+          "cell filtering、txpool overlay、非分组分页、数据库中断、强制崩溃、迁移、性能与其他产品 PR 不在本 slice；未计量 reset_spent_cells 的内部数据库调用次数，接口正确不能证明零内部查询。 / EN: Cell filtering, pool overlay, ungrouped pagination, outages, forced crashes, migrations, performance and other product PRs are outside this slice. Internal reset_spent_cells database-call counts are not measured; correct public behavior does not establish zero internal queries.",
+          "等待使用 45 秒 deadline、0.1 秒轮询和每次 RPC 的单次调用/5 秒超时；仅启动阶段重试连接或超时。其他 RPC 异常、节点退出、过期等待和清理失败使测试失败，不被吞掉。分页最多 30 页；这些有限条件不是性能阈值保证。 / EN: Waits use a 45-second deadline, 0.1-second polling and one RPC attempt with a five-second timeout; connection/timeouts are retried only at startup. Other RPC errors, node exits, expired waits and cleanup failures fail the test. Pagination allows at most 30 pages; these finite conditions are not performance guarantees.",
+          "记录器在 logreport 时浅拷贝 TestReport，判定仅依赖 when/outcome/wasxfail 标量；HTML 合并阶段对原报告的标量重赋值不改写快照。只有完整且唯一的 setup/call/teardown 成功才授予执行成功；失败、跳过、重复阶段及意外成功保留失败或不稳定信息。该规则不保证所有其他插件、嵌套可变字段或并发 runner 的兼容性；Case 覆盖判断与正式执行证据分别管理。 / EN: The recorder shallow-copies TestReport at logreport and classifies scalar when/outcome/wasxfail fields; later HTML scalar reassignment leaves snapshots intact. Execution success requires complete unique successful setup/call/teardown phases; failures, skips, duplicate phases and unexpected successes retain failure or instability information. This does not guarantee compatibility with every other plugin, nested mutable field or concurrent runner; Case coverage and official execution evidence remain separate."
+        ]
+      },
+      {
+        "case_id": "RICH-ROLLBACK-03",
+        "mapped": true,
+        "coverage": "covered",
+        "validity": "current",
+        "execution": "passed",
+        "unstable": false,
+        "priority": "P0",
+        "issues": [
+          "覆盖只涉及固定精确 lock、有限构造的 cell/交易、固定高度 block filter 和分组交易查询；完整结果指该查询范围。有限深度与输入不能证明所有回滚深度、所有输入或整个数据库。 / EN: Coverage concerns one fixed exact lock, finite constructed cells/transactions, fixed height filtering and grouped queries; complete results refer to that query domain. Finite depths/inputs do not establish all rollback depths, all inputs or whole-database correctness.",
+          "cell filtering、txpool overlay、非分组分页、数据库中断、强制崩溃、迁移、性能与其他产品 PR 不在本 slice；未计量 reset_spent_cells 的内部数据库调用次数，接口正确不能证明零内部查询。 / EN: Cell filtering, pool overlay, ungrouped pagination, outages, forced crashes, migrations, performance and other product PRs are outside this slice. Internal reset_spent_cells database-call counts are not measured; correct public behavior does not establish zero internal queries.",
+          "等待使用 45 秒 deadline、0.1 秒轮询和每次 RPC 的单次调用/5 秒超时；仅启动阶段重试连接或超时。其他 RPC 异常、节点退出、过期等待和清理失败使测试失败，不被吞掉。分页最多 30 页；这些有限条件不是性能阈值保证。 / EN: Waits use a 45-second deadline, 0.1-second polling and one RPC attempt with a five-second timeout; connection/timeouts are retried only at startup. Other RPC errors, node exits, expired waits and cleanup failures fail the test. Pagination allows at most 30 pages; these finite conditions are not performance guarantees.",
+          "记录器在 logreport 时浅拷贝 TestReport，判定仅依赖 when/outcome/wasxfail 标量；HTML 合并阶段对原报告的标量重赋值不改写快照。只有完整且唯一的 setup/call/teardown 成功才授予执行成功；失败、跳过、重复阶段及意外成功保留失败或不稳定信息。该规则不保证所有其他插件、嵌套可变字段或并发 runner 的兼容性；Case 覆盖判断与正式执行证据分别管理。 / EN: The recorder shallow-copies TestReport at logreport and classifies scalar when/outcome/wasxfail fields; later HTML scalar reassignment leaves snapshots intact. Execution success requires complete unique successful setup/call/teardown phases; failures, skips, duplicate phases and unexpected successes retain failure or instability information. This does not guarantee compatibility with every other plugin, nested mutable field or concurrent runner; Case coverage and official execution evidence remain separate."
+        ]
+      },
+      {
+        "case_id": "RICH-ROLLBACK-04",
+        "mapped": true,
+        "coverage": "covered",
+        "validity": "current",
+        "execution": "passed",
+        "unstable": false,
+        "priority": "P1",
+        "issues": [
+          "覆盖只涉及固定精确 lock、有限构造的 cell/交易、固定高度 block filter 和分组交易查询；完整结果指该查询范围。有限深度与输入不能证明所有回滚深度、所有输入或整个数据库。 / EN: Coverage concerns one fixed exact lock, finite constructed cells/transactions, fixed height filtering and grouped queries; complete results refer to that query domain. Finite depths/inputs do not establish all rollback depths, all inputs or whole-database correctness.",
+          "cell filtering、txpool overlay、非分组分页、数据库中断、强制崩溃、迁移、性能与其他产品 PR 不在本 slice；未计量 reset_spent_cells 的内部数据库调用次数，接口正确不能证明零内部查询。 / EN: Cell filtering, pool overlay, ungrouped pagination, outages, forced crashes, migrations, performance and other product PRs are outside this slice. Internal reset_spent_cells database-call counts are not measured; correct public behavior does not establish zero internal queries.",
+          "等待使用 45 秒 deadline、0.1 秒轮询和每次 RPC 的单次调用/5 秒超时；仅启动阶段重试连接或超时。其他 RPC 异常、节点退出、过期等待和清理失败使测试失败，不被吞掉。分页最多 30 页；这些有限条件不是性能阈值保证。 / EN: Waits use a 45-second deadline, 0.1-second polling and one RPC attempt with a five-second timeout; connection/timeouts are retried only at startup. Other RPC errors, node exits, expired waits and cleanup failures fail the test. Pagination allows at most 30 pages; these finite conditions are not performance guarantees.",
+          "记录器在 logreport 时浅拷贝 TestReport，判定仅依赖 when/outcome/wasxfail 标量；HTML 合并阶段对原报告的标量重赋值不改写快照。只有完整且唯一的 setup/call/teardown 成功才授予执行成功；失败、跳过、重复阶段及意外成功保留失败或不稳定信息。该规则不保证所有其他插件、嵌套可变字段或并发 runner 的兼容性；Case 覆盖判断与正式执行证据分别管理。 / EN: The recorder shallow-copies TestReport at logreport and classifies scalar when/outcome/wasxfail fields; later HTML scalar reassignment leaves snapshots intact. Execution success requires complete unique successful setup/call/teardown phases; failures, skips, duplicate phases and unexpected successes retain failure or instability information. This does not guarantee compatibility with every other plugin, nested mutable field or concurrent runner; Case coverage and official execution evidence remain separate."
+        ]
+      },
+      {
+        "case_id": "RICH-ROLLBACK-05",
+        "mapped": true,
+        "coverage": "covered",
+        "validity": "current",
+        "execution": "passed",
+        "unstable": false,
+        "priority": "P1",
+        "issues": [
+          "覆盖只涉及固定精确 lock、有限构造的 cell/交易、固定高度 block filter 和分组交易查询；完整结果指该查询范围。有限深度与输入不能证明所有回滚深度、所有输入或整个数据库。 / EN: Coverage concerns one fixed exact lock, finite constructed cells/transactions, fixed height filtering and grouped queries; complete results refer to that query domain. Finite depths/inputs do not establish all rollback depths, all inputs or whole-database correctness.",
+          "cell filtering、txpool overlay、非分组分页、数据库中断、强制崩溃、迁移、性能与其他产品 PR 不在本 slice；未计量 reset_spent_cells 的内部数据库调用次数，接口正确不能证明零内部查询。 / EN: Cell filtering, pool overlay, ungrouped pagination, outages, forced crashes, migrations, performance and other product PRs are outside this slice. Internal reset_spent_cells database-call counts are not measured; correct public behavior does not establish zero internal queries.",
+          "等待使用 45 秒 deadline、0.1 秒轮询和每次 RPC 的单次调用/5 秒超时；仅启动阶段重试连接或超时。其他 RPC 异常、节点退出、过期等待和清理失败使测试失败，不被吞掉。分页最多 30 页；这些有限条件不是性能阈值保证。 / EN: Waits use a 45-second deadline, 0.1-second polling and one RPC attempt with a five-second timeout; connection/timeouts are retried only at startup. Other RPC errors, node exits, expired waits and cleanup failures fail the test. Pagination allows at most 30 pages; these finite conditions are not performance guarantees.",
+          "记录器在 logreport 时浅拷贝 TestReport，判定仅依赖 when/outcome/wasxfail 标量；HTML 合并阶段对原报告的标量重赋值不改写快照。只有完整且唯一的 setup/call/teardown 成功才授予执行成功；失败、跳过、重复阶段及意外成功保留失败或不稳定信息。该规则不保证所有其他插件、嵌套可变字段或并发 runner 的兼容性；Case 覆盖判断与正式执行证据分别管理。 / EN: The recorder shallow-copies TestReport at logreport and classifies scalar when/outcome/wasxfail fields; later HTML scalar reassignment leaves snapshots intact. Execution success requires complete unique successful setup/call/teardown phases; failures, skips, duplicate phases and unexpected successes retain failure or instability information. This does not guarantee compatibility with every other plugin, nested mutable field or concurrent runner; Case coverage and official execution evidence remain separate."
+        ]
+      },
+      {
+        "case_id": "RICH-ROLLBACK-06",
+        "mapped": true,
+        "coverage": "covered",
+        "validity": "current",
+        "execution": "passed",
+        "unstable": false,
+        "priority": "P1",
+        "issues": [
+          "覆盖只涉及固定精确 lock、有限构造的 cell/交易、固定高度 block filter 和分组交易查询；完整结果指该查询范围。有限深度与输入不能证明所有回滚深度、所有输入或整个数据库。 / EN: Coverage concerns one fixed exact lock, finite constructed cells/transactions, fixed height filtering and grouped queries; complete results refer to that query domain. Finite depths/inputs do not establish all rollback depths, all inputs or whole-database correctness.",
+          "cell filtering、txpool overlay、非分组分页、数据库中断、强制崩溃、迁移、性能与其他产品 PR 不在本 slice；未计量 reset_spent_cells 的内部数据库调用次数，接口正确不能证明零内部查询。 / EN: Cell filtering, pool overlay, ungrouped pagination, outages, forced crashes, migrations, performance and other product PRs are outside this slice. Internal reset_spent_cells database-call counts are not measured; correct public behavior does not establish zero internal queries.",
+          "等待使用 45 秒 deadline、0.1 秒轮询和每次 RPC 的单次调用/5 秒超时；仅启动阶段重试连接或超时。其他 RPC 异常、节点退出、过期等待和清理失败使测试失败，不被吞掉。分页最多 30 页；这些有限条件不是性能阈值保证。 / EN: Waits use a 45-second deadline, 0.1-second polling and one RPC attempt with a five-second timeout; connection/timeouts are retried only at startup. Other RPC errors, node exits, expired waits and cleanup failures fail the test. Pagination allows at most 30 pages; these finite conditions are not performance guarantees.",
+          "记录器在 logreport 时浅拷贝 TestReport，判定仅依赖 when/outcome/wasxfail 标量；HTML 合并阶段对原报告的标量重赋值不改写快照。只有完整且唯一的 setup/call/teardown 成功才授予执行成功；失败、跳过、重复阶段及意外成功保留失败或不稳定信息。该规则不保证所有其他插件、嵌套可变字段或并发 runner 的兼容性；Case 覆盖判断与正式执行证据分别管理。 / EN: The recorder shallow-copies TestReport at logreport and classifies scalar when/outcome/wasxfail fields; later HTML scalar reassignment leaves snapshots intact. Execution success requires complete unique successful setup/call/teardown phases; failures, skips, duplicate phases and unexpected successes retain failure or instability information. This does not guarantee compatibility with every other plugin, nested mutable field or concurrent runner; Case coverage and official execution evidence remain separate.",
+          "重启覆盖正常停止后原存储的接口一致性和继续索引；不通过 crash 或故障注入证明 durability，也不计量启动内部重放次数。 / EN: Restart coverage checks interface consistency and continued indexing after normal stop with retained storage; it does not prove crash durability through fault injection or count internal startup replay operations."
+        ]
+      }
+    ],
+    "scope_boundary": "Existing six rich-indexer rollback/recovery Cases with runner snapshot compatibility repair only; behavioral expectations and command unchanged. Cell filtering, txpool overlay, ungrouped pagination, outages, forced crashes, migrations, performance and other PRs remain unanalysed.",
+    "execution_level": "selector"
+  }
+}

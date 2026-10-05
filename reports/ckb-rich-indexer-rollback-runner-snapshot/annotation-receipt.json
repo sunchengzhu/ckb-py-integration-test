@@ -1,0 +1,11 @@
+{
+  "changes": {
+    "suites/rpc/tests/test_rich_indexer_rollback.py": {
+      "after": "5868427be2df76369d44f12f3862df6653f72eaf823e3e9fc9c99f36dd0a2e57",
+      "before": "84d0756a9659a4fe453625962d287830207475d7f339b43afa37710f6e4d9600"
+    }
+  },
+  "from": "3492df90d76268a0b6ae20248eb6df36f7e5aa1f5e5143d72ef6cfe12302472d",
+  "to": "d33ced903be2a560761445e78b74d9501e908e34e8dbc456c92dd853552724e9",
+  "validation": "Python AST + tokens + exact unmanaged text"
+}

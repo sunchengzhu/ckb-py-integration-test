@@ -1,0 +1,20 @@
+{
+  "scope": "ckb-rich-indexer-rollback-runner-snapshot",
+  "request": "User: 好的 我知道了 你继续 严格按照agent的规范来",
+  "reason": "The previous scope exhausted one full coverage review plus one bounded revision. Its G2 is blocked because our runner retains mutable TestReport objects changed by pytest-html; establish a new explicit analysis scope, preserve Case IDs and expectations, and stop at G1 before applying the proposed runner fix.",
+  "selected_behavior": "First addition of rich-indexer filtered, normal and mixed rollback, continued indexing and normal restart tests after full test PR145 revert; cell filtering, txpool overlay, ungrouped pagination, outages, forced crashes, migrations, performance and other product PRs unanalysed.",
+  "planned_change": "Store a shallow TestReport snapshot at the report hook; do not change product code, confirmed behavioral assertions, Case IDs, command or pass/skip/unstable policy.",
+  "proposal_applied": false,
+  "previous_native_pytest": "14 passed in 32.07s, exit 0; runner recorded 14 not_run/unstable instances, so no accepted per-Case pass.",
+  "command": [
+    "venv/bin/python",
+    "-m",
+    "pytest",
+    "-c",
+    "pytest.ini",
+    "-vv",
+    "suites/rpc/tests/test_rich_indexer_rollback.py"
+  ],
+  "review_guarantee": "Native fresh subagent, no A history, isolation_unverified; model/token/cost unavailable.",
+  "required_human_gate": "Current-scope G1 confirmation binds these inputs before applying the proposed mapped runner change."
+}

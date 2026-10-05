@@ -1,0 +1,176 @@
+{
+  "collected": 14,
+  "command": [
+    "venv/bin/python",
+    "-m",
+    "pytest",
+    "-c",
+    "pytest.ini",
+    "-vv",
+    "suites/rpc/tests/test_rich_indexer_rollback.py"
+  ],
+  "cwd": ".",
+  "duration_seconds": 37.752,
+  "environment_keys": [
+    "AI_TEST_AGENT_RESULT",
+    "AI_TEST_AGENT_ROOT",
+    "LANG",
+    "LC_ALL",
+    "PATH",
+    "PYTHONDONTWRITEBYTECODE",
+    "TMPDIR"
+  ],
+  "exit_code": 0,
+  "failure_kind": "unclassified",
+  "input_fingerprint": "d33ced903be2a560761445e78b74d9501e908e34e8dbc456c92dd853552724e9",
+  "level": "selector",
+  "manifest": [
+    {
+      "file": "suites/rpc/tests/test_rich_indexer_rollback.py",
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_single_filtered_block[postgres]",
+      "symbol": "TestRichIndexerRollback.test_single_filtered_block"
+    },
+    {
+      "file": "suites/rpc/tests/test_rich_indexer_rollback.py",
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_single_filtered_block[sqlite]",
+      "symbol": "TestRichIndexerRollback.test_single_filtered_block"
+    },
+    {
+      "file": "suites/rpc/tests/test_rich_indexer_rollback.py",
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_consecutive_filtered_blocks[postgres]",
+      "symbol": "TestRichIndexerRollback.test_consecutive_filtered_blocks"
+    },
+    {
+      "file": "suites/rpc/tests/test_rich_indexer_rollback.py",
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_consecutive_filtered_blocks[sqlite]",
+      "symbol": "TestRichIndexerRollback.test_consecutive_filtered_blocks"
+    },
+    {
+      "file": "suites/rpc/tests/test_rich_indexer_rollback.py",
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_indexed_spend_restored[postgres]",
+      "symbol": "TestRichIndexerRollback.test_indexed_spend_restored"
+    },
+    {
+      "file": "suites/rpc/tests/test_rich_indexer_rollback.py",
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_indexed_spend_restored[sqlite]",
+      "symbol": "TestRichIndexerRollback.test_indexed_spend_restored"
+    },
+    {
+      "file": "suites/rpc/tests/test_rich_indexer_rollback.py",
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_mixed_rollback_orders[filtered-first-postgres]",
+      "symbol": "TestRichIndexerRollback.test_mixed_rollback_orders"
+    },
+    {
+      "file": "suites/rpc/tests/test_rich_indexer_rollback.py",
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_mixed_rollback_orders[filtered-first-sqlite]",
+      "symbol": "TestRichIndexerRollback.test_mixed_rollback_orders"
+    },
+    {
+      "file": "suites/rpc/tests/test_rich_indexer_rollback.py",
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_mixed_rollback_orders[indexed-first-postgres]",
+      "symbol": "TestRichIndexerRollback.test_mixed_rollback_orders"
+    },
+    {
+      "file": "suites/rpc/tests/test_rich_indexer_rollback.py",
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_mixed_rollback_orders[indexed-first-sqlite]",
+      "symbol": "TestRichIndexerRollback.test_mixed_rollback_orders"
+    },
+    {
+      "file": "suites/rpc/tests/test_rich_indexer_rollback.py",
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_spend_restored_cell[postgres]",
+      "symbol": "TestRichIndexerRollback.test_spend_restored_cell"
+    },
+    {
+      "file": "suites/rpc/tests/test_rich_indexer_rollback.py",
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_spend_restored_cell[sqlite]",
+      "symbol": "TestRichIndexerRollback.test_spend_restored_cell"
+    },
+    {
+      "file": "suites/rpc/tests/test_rich_indexer_rollback.py",
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_restart_preserves_rollback[postgres]",
+      "symbol": "TestRichIndexerRollback.test_restart_preserves_rollback"
+    },
+    {
+      "file": "suites/rpc/tests/test_rich_indexer_rollback.py",
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_restart_preserves_rollback[sqlite]",
+      "symbol": "TestRichIndexerRollback.test_restart_preserves_rollback"
+    }
+  ],
+  "output_file": "reports/ckb-rich-indexer-rollback-runner-snapshot/execution.log",
+  "output_sha256": "1317d4f63bef403994123393063c4ece568a36fbe43b84d8f611916545e95f5b",
+  "product_head": "33e4eec7502b754ddf61282c04e0a76a29e27b26",
+  "results": [
+    {
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_single_filtered_block[postgres]",
+      "status": "passed",
+      "unstable": false
+    },
+    {
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_single_filtered_block[sqlite]",
+      "status": "passed",
+      "unstable": false
+    },
+    {
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_consecutive_filtered_blocks[postgres]",
+      "status": "passed",
+      "unstable": false
+    },
+    {
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_consecutive_filtered_blocks[sqlite]",
+      "status": "passed",
+      "unstable": false
+    },
+    {
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_indexed_spend_restored[postgres]",
+      "status": "passed",
+      "unstable": false
+    },
+    {
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_indexed_spend_restored[sqlite]",
+      "status": "passed",
+      "unstable": false
+    },
+    {
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_mixed_rollback_orders[filtered-first-postgres]",
+      "status": "passed",
+      "unstable": false
+    },
+    {
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_mixed_rollback_orders[filtered-first-sqlite]",
+      "status": "passed",
+      "unstable": false
+    },
+    {
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_mixed_rollback_orders[indexed-first-postgres]",
+      "status": "passed",
+      "unstable": false
+    },
+    {
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_mixed_rollback_orders[indexed-first-sqlite]",
+      "status": "passed",
+      "unstable": false
+    },
+    {
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_spend_restored_cell[postgres]",
+      "status": "passed",
+      "unstable": false
+    },
+    {
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_spend_restored_cell[sqlite]",
+      "status": "passed",
+      "unstable": false
+    },
+    {
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_restart_preserves_rollback[postgres]",
+      "status": "passed",
+      "unstable": false
+    },
+    {
+      "selector": "suites/rpc/tests/test_rich_indexer_rollback.py::TestRichIndexerRollback::test_restart_preserves_rollback[sqlite]",
+      "status": "passed",
+      "unstable": false
+    }
+  ],
+  "schema_version": "2.0",
+  "status": "passed"
+}
